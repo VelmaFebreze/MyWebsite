@@ -123,6 +123,37 @@ text-shadow: 0 0 5px #78BE98,
 animation: glow 1s ease-in-out infinite alternate;
 text-align: center;
 }
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+}
+.item:not(:first-child) {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.item__content {
+  text-align: center;
+  padding: 7rem;
+  border-radius: 7px;
+}
+.item > p {
+  text-align: center;
+}
+.left {
+  transform-origin: left center;
+  transform: translateX(-50%);
+}
+.right {
+  transform-origin: right center;
+  transform: translateX(50%);
+}
+.slide-in {
+  opacity: 1 !important;
+  transform: translateX(0);
+}
 .state-flags {
   display: flex;
   width: 10rem;
@@ -186,7 +217,7 @@ button:not([type="submit"]) {
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  background-color: #717171;
+  background-color: #526D82;
   color: #f1f1f1;
   font-size: 32px;
   font-stretch: condensed;
@@ -194,7 +225,7 @@ button:not([type="submit"]) {
   transition: all 200ms ease-in-out;
 }
 button:hover {
-  background-color: steelblue;
+  background-color: #64B48B;
 }
 
 button#prev {
@@ -207,11 +238,83 @@ button#next {
   padding: 7px 15px 7px 17px;
 }
 
-.text-img{
+.text-img {
 margin: 3%;
 padding:.5%;
 border:dotted;
 border-color: #DDE6ED;
+}
+
+.projects {
+  font-size:350%;
+color: #EFFAE9;
+text-shadow: 0 0 5px #78BE98, 
+    0 0 10px #64B48B, 
+    0 0 15px #50AA7D, 
+    0 0 20px #3CA070, 
+    0 0 25px #289562, 
+    0 0 30px #148B55, 
+    0 0 35px #008147;
+animation: glow 1s ease-in-out infinite alternate;
+text-align: center;
+}
+
+.projects-smaller {
+  font-size: 200%;
+  text-align: center;
+}
+
+.project-container {
+display: grid;
+grid-template-rows: 30rem 30rem;
+justify-content: center;
+row-gap: 15rem;
+margin-bottom: 10rem;
+}
+
+.project-item {
+  justify-content: center;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 275%;
+  color: #78BE98;
+}
+
+.project-info {
+  font-size: 1.5rem;
+}
+
+.project-link {
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px #419DE6, 
+    0 0 10px #4495D5, 
+    0 0 15px #478DC5, 
+    0 0 20px #4A85B4, 
+    0 0 25px #4C7DA3, 
+    0 0 30px #4F7593, 
+    0 0 35px #526D82;
+    display: inline;
+    color: #000000;
+  }
+
+.project-link:visited {
+    color: #DDE6ED;
+  }
+  
+.project-link:hover {
+color: #DDE6ED;
+transition: fade-in;
+}
+.project-link:visited:hover {
+color: #000000;
+transition: fade-in;
+}
+
+.project-img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .linkedin-container {
